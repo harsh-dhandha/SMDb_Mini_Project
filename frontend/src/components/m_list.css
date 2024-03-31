@@ -1,0 +1,40 @@
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    background-color:lavenderblush;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.movie-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid gray;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.movie-details div {
+    margin-bottom: 10px;
+}
+
+.movie-details strong {
+    font-weight: bold;
+}

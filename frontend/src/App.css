@@ -1,0 +1,113 @@
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+h1
+{
+  color: white;
+  text-align: center;
+}
+body {
+  background-color: gainsboro;
+  margin: 0; /* Remove default body margin */
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Limit maximum width of container */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid with minimum width of 300px */
+  gap: 20px;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Image takes auto width, details take remaining space */
+  gap: 20px; /* Gap between image and details */
+}
+
+.movie-image {
+  max-width: 200px; /* Limit the width of the movie image */
+}
+
+.movie-details {
+  font-family: 'Comic Neue', cursive;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #e41f1f;
+  font-family: 'Comic Neue', cursive;
+  font-size: 16px;
+  border: 2px solid #fff;
+  transition: background-color 0.3s ease;
+  animation: shake 0.5s infinite;
+}
+
+.links a:hover {
+  background-color: #ff6666;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GSAP Animations */
+.links a {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+/* Classy CSS */
+.container {
+  background-color: black !important;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.links a {
+  background-color: blueviolet ;;
+  color: lavenderblush;
+  font-size: 18px;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  animation: shake 0.5s infinite, fadeInUp 0.5s ease-in-out forwards;
+}
