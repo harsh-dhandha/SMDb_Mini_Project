@@ -29,7 +29,7 @@ const AddMovieForm = () => {
         setLoading(true);
 
         // Make a POST request to add a new movie
-        axios.post('http://localhost:5000/api/movies', {
+        axios.post('https://smdb-mini-project.onrender.com/api/movies', {
             title,
             genre,
             director,
