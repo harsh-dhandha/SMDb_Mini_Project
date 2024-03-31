@@ -9,7 +9,7 @@ const MovieList = () => {
 
     useEffect(() => {
         // Fetch movies data from backend API
-        axios.get('http://localhost:5000/api/movies')
+        axios.get('https://smdb-mini-project.onrender.com/api/movies')
             .then(response => {
                 setMovies(response.data);
                 setLoading(false);
