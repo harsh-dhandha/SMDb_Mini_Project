@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB database
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect('mongodb+srv://myAtlasDBUser:tikitaka@myatlasclusteredu.1ap2k6d.mongodb.net/movie_database', {
 
 })
 .then(() => console.log('MongoDB connected'))
