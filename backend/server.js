@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+require("dotenv").config();
 
 // Create an Express application
 const app = express();
@@ -12,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Connect to MongoDB database
-mongoose.connect('mongodb+srv://myAtlasDBUser:tikitaka@myatlasclusteredu.1ap2k6d.mongodb.net/movie_database', {
+mongoose.connect('process.env.MONGO_URI', {
 
 })
 .then(() => console.log('MongoDB connected'))
